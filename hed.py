@@ -12,7 +12,7 @@ filedir = 'E:/AI/tensorflow/tensorflow/test/edgetest/HED-BSDS/train_pair_test.tx
 src_data_list, label_list = loadData.load_data(filedir)
 
 data = loadData.read_images(src_data_list)  # image data
-label = loadData.get_line_label(label_list)    # label
+label = loadData.read_images(label_list)    # label
 
 # Building 'VGG Network'
 net_input_data = input_data(shape=[None,224,224,3])
